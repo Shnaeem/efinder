@@ -1,17 +1,17 @@
 ![](/img/mockups/readme_banner.png)
 
-**🤷🏾is eFinder?:**
+## What is eFinder?:
 
 eFinder is an application that allows users to find concerts, festivals, and sporting events. Instead of barraging users with endless search results that get seemingly less and less relevant as they go on, eFinder simply displays the top twenty most relevant search results, giving users a less overwhelming amount of search results. User is able to access the application which displays a search by event function, event type and location.
 
-**📲Features:**
+## Features:
 - User will see a **Search for events** on the home page
 - User will be able to **search/generate twenty results**
 - User will be able to **search by artists**
 - User will be able to **search by events**
 - Responsive layout
 
-**Wireframes:** 
+## Wireframes: 
 
 ## API Resources:
 
