@@ -17,17 +17,17 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 
 | API Resource Type  | Links |
 | ------------- | ------------- |
-| Ticketmaster API  | https://app.ticketmaster.com/discovery/v2/venues?apikey=
+| Ticketmaster API  | https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
 
 ## ⚙ This project is built using:
 
 - `HTML/CSS`
 - `Javascript`
 - [Tailwind CSS]( https://tailwindcss.com/)
--[Axios](https://www.npmjs.com/package/axios)
--[React](https://reactjs.org/)
--[React-Router](https://reactrouter.com/web/guides/quick-start)
--[Figma](https://www.figma.com/) 
+- [Axios](https://www.npmjs.com/package/axios)
+- [React](https://reactjs.org/)
+- [React-Router](https://reactrouter.com/web/guides/quick-start)
+- [Figma](https://www.figma.com/) 
 
 ## 📃License
 License
