@@ -29,6 +29,13 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 - [React-Router](https://reactrouter.com/web/guides/quick-start)
 - [Figma](https://www.figma.com/) 
 
+## MVP Goals
+
+- Validate the premise of the application
+- Test hypotheses about market needs
+- Test the product with users
+- Make adjustments to the product vision based on feedback
+
 ## 📃License
 License
 - Copyright © 2021 Naeem Shafi, Katherine Fernandez
