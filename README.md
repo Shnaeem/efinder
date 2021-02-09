@@ -17,7 +17,7 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 
 | API Resource Type  | Links |
 | ------------- | ------------- |
-| Ticketmaster API  | https://app.ticketmaster.com/discovery/v2/venues?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*  |
+| Ticketmaster API  | https://app.ticketmaster.com/discovery/v2/venues?apikey=
 
 ## ⚙ This project is built using:
 
