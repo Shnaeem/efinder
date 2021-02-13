@@ -36,27 +36,6 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 - Test the product with users
 - Make adjustments to the product vision based on feedback
 
-## SWOT Analysis
-| Strengths
-Naeem is good at Js 
-Katherine is good at Css Framework and Figma
-  | Weakness
-Naeem is weak at Designing part 
-Katherine is weak at Js
- |
-| ------------- | ------------- |
-| Opportunities
-
-Learn from each other 
-We will cover each other’s weaknesses
-Collaborate with each other 
-Monetize through the project later on
-  | Threats
-
-Time might be a constraint for us
-Competitors that have a similar product
-
-
 ## 📃License
 License
 - Copyright © 2021 Naeem Shafi, Katherine Fernandez
