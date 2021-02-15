@@ -106,6 +106,7 @@ function Navbar() {
           return (
             <Button className={btnCss} key={index}>
               <NavLink
+                exact
                 to={menu.to}
                 className={navLink}
                 activeClassName={activeNavLink}

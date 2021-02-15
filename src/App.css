@@ -2,3 +2,12 @@ html,
 body {
   background-color: #05050f;
 }
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+/* the parent */
+.slick-list {
+  margin-left: 2%;
+}
