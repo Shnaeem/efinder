@@ -1,15 +1,13 @@
-import { FETCH_DATA } from './types';
-import axios from 'axios';
+import axios from "axios";
 
-export const fetchDataAction = () => (dispatch) => {
-  axios
-    .get(
-      'https://app.ticketmaster.com/discovery/v2/events.json?apikey=Znmb6FQXSSodmuAG9TwlL70LEMjIB5AS'
-    )
-    .then((res) => {
-      console.log(res.data);
+const FetchData  = async () => {    
+    const url = "https://app.ticketmaster.com/discovery/v2/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us&preferredCountry=us";
+    const response = await axios.get (url)
+    .then((res)=>{
+        console.log(res);
+        return res
     })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+    return response;
+}
+
+export default FetchData;
