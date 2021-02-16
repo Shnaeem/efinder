@@ -82,6 +82,7 @@ function Card() {
     setFlip(!flip);
   };
 
+  
   return (
     <section className={container}>
       <div className={flip ? `${card} ${flipped}` : card} onClick={cardFlip}>

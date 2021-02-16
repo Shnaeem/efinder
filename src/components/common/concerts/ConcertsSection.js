@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function ConcertsSection({ concertsData }) {
   const classes = useStyles();
   const { concertsSectionCss, headingCss } = classes;

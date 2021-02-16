@@ -8,197 +8,39 @@ import axios from 'axios';
 
 // Concerts Header Data
 
-const concertsData = [
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-  {
-    images: [
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-      {
-        url:
-          'https://cdn.pixabay.com/photo/2014/05/03/01/02/concert-336695__340.jpg',
-      },
-    ],
-
-    name: 'Concert Name',
-
-    dates: { start: { localTime: 'time', localDate: 'date' } },
-
-    _embedded: {
-      venues: [{ name: 'venues name', city: { name: 'city name' } }],
-    },
-    url: 'https://google.come',
-  },
-];
+const masterUrl = "https://app.ticketmaster.com/discovery/v2";
 
 function App() {
   const [output, setOutput] = useState([]);
+  const [concertoutput, setConcertOutput] = useState([]);
+  const [sportoutput, setSportOutput] = useState([]);
   const getData = async () => {
-    let url =
-      'https://app.ticketmaster.com/discovery/v2/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us&preferredCountry=us';
-    let res = await axios.get(url);
-    setOutput(res.data._embedded.events);
+    // let url1 =`${masterUrl}/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us`;
+    let url1 =`${masterUrl}/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us&stateCode=ny&preferredCountry=us`;
+    
+    let res1 = await axios.get(url1);
+    setOutput(res1.data._embedded.events);
+  };
+
+  const getData2 = async () => {
+    let url2 =`${masterUrl}/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us&sort=date,asc&classificationName=concert&preferredCountry=us`;
+    let res2 = await axios.get(url2);
+    setConcertOutput(res2.data._embedded.events);
+  };
+
+  const getData3 = async () => {
+    let url3 =`${masterUrl}/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us&sort=date,asc&classificationName=sports&preferredCountry=us`;
+    let res3 = await axios.get(url3);
+    setSportOutput(res3.data._embedded.events);
   };
 
   useEffect(() => {
     getData();
+    getData2();
+    getData3();
   }, []);
 
+  
   console.log(output);
   return (
     <BrowserRouter>
@@ -206,18 +48,25 @@ function App() {
         <Route
           exact
           path="/"
-          render={() => <Home data={output} concertsData={concertsData} />}
+          render={() => <Home data={output} concertsData={concertoutput} sportsData={sportoutput}/>}
         />
         <Route
           exact
           path="/concerts"
-          render={() => <Concerts concertsData={output} />}
+          render={() => <Concerts concertsData={concertoutput} />}
         />
         <Route
           exact
           path="/sports"
-          render={() => <Sports sportsData={output} />}
+          render={() => <Sports sportsData={sportoutput} />}
         />
+
+        <Route
+          exact
+          path="/genre/:query"
+          render={() => <Sports sportsData={sportoutput} />}
+        />
+
       </Switch>
     </BrowserRouter>
   );

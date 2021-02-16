@@ -80,15 +80,18 @@ const useStyles = makeStyles((theme) => ({
   imgTextCss: {
     position: 'absolute',
     bottom: '0',
+    
     '& p': {
       position: 'relative',
       marginTop: '270px',
       marginLeft: '20px',
       marginBottom: '5px',
+      backgroundColor: "rgba(0, 0, 0, 0.3)",
     },
     '& h5': {
       marginLeft: '20px',
       marginTop: '5px',
+      backgroundColor: "rgba(0, 0, 0, 0.3)",
     },
   },
 }));
@@ -102,6 +105,7 @@ function Card({ image, title, date, time, venue, venuecity, buyticket }) {
   const cardFlip = () => {
     setFlip(!flip);
   };
+
 
   return (
     <section className={container}>

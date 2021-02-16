@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import { primaryColor, textColor, fontFamily } from '../common/Scheme';
 
+
 const useStyles = makeStyles((theme) => ({
   footerContainerCss: {
     background: primaryColor,

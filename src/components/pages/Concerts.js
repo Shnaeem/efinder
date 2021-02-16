@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+
 function Concerts({ concertsData }) {
   const classes = useStyles();
   const { mainSectionCss } = classes;

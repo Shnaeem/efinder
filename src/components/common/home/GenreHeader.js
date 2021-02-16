@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function GenreHeader() {
   const classes = useStyles();
   const { headigCss } = classes;

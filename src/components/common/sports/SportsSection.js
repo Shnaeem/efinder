@@ -23,6 +23,7 @@ function SportsSection({ sportsData }) {
   const classes = useStyles();
   const { concertsSectionCss, headingCss } = classes;
 
+  
   return (
     <Fragment>
       <h1 className={headingCss}>Sports</h1>

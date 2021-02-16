@@ -11,6 +11,7 @@ import icon4 from '../../assets/icon4.png';
 import icon5 from '../../assets/icon5.png';
 import icon6 from '../../assets/icon6.png';
 
+
 const cardData = [
   {
     title: 'Hip Hop Rap',

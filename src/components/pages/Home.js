@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Home({ data, concertsData }) {
+function Home({ data, concertsData, sportsData }) {
   const classes = useStyles();
   const { mainSectionCss } = classes;
   return (
@@ -26,7 +26,7 @@ function Home({ data, concertsData }) {
         <HomeHeader data={data} />
         <GenreHeader />
         <ConcertsHeader data={concertsData} />
-        <SportsHeader data={data} />
+        <SportsHeader data={sportsData} />
       </section>
       <Footer />
     </Fragment>

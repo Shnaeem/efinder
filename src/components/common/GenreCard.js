@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function GenreCard({ icon, text, color }) {
   const classes = useStyles();
   const { cardCss } = classes;

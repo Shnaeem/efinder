@@ -31,6 +31,7 @@ function SportsHeader({ data }) {
   const classes = useStyles();
   const { headigCss, infoWrapperCss, linkCss, btnCss } = classes;
 
+  
   return (
     <section>
       <div className={infoWrapperCss}>

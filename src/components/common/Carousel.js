@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function Carousel({ data }) {
   const classes = useStyles();
   const { slideContainer } = classes;

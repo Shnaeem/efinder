@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function HomeHeader({ data }) {
   const classes = useStyles();
   const { headigCss } = classes;
