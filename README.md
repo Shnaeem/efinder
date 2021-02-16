@@ -8,7 +8,7 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 - User will see a **Trending Event**
 - User will be able to see **Top Concerts**
 - User will be able to see **Top Sports Events**
-- User can purchase ticket from Ticket Master for the Event/Concerts
+- User can **Purchase Ticket** from Ticket Master for the Event/Concerts
 - Responsive layout
 
 ## Wireframes: 
