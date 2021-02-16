@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Home from './components/pages/Home';
 import Concerts from './components/pages/Concerts';
 import Sports from './components/pages/Sports';
+import AboutUs from './components/pages/AboutUs'
+
 import './App.css';
 import axios from 'axios';
 
@@ -40,7 +42,7 @@ function App() {
     getData3();
   }, []);
 
-  
+
   console.log(output);
   return (
     <BrowserRouter>
@@ -61,10 +63,16 @@ function App() {
           render={() => <Sports sportsData={sportoutput} />}
         />
 
-        <Route
+        {/* <Route
           exact
           path="/genre/:query"
           render={() => <Sports sportsData={sportoutput} />}
+        /> */}
+
+        <Route
+          exact
+          path="/aboutus"
+          render={() => <AboutUs />}
         />
 
       </Switch>
