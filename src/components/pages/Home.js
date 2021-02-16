@@ -24,7 +24,7 @@ function Home({ data, concertsData, sportsData }) {
       <Navbar />
       <section className={mainSectionCss}>
         <HomeHeader data={data} />
-        <GenreHeader />
+        {/* <GenreHeader /> */}
         <ConcertsHeader data={concertsData} />
         <SportsHeader data={sportsData} />
       </section>

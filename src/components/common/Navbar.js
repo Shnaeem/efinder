@@ -94,11 +94,12 @@ function Navbar() {
     <div className={navContainerCss}>
       <div className={logoWrapper}>
         <img src={logo} alt="eFinder-logo" />
-        <input
+        {/* <input
           type="text"
           className={inputCss}
           placeholder="Search by artist , sports or zip code"
         />
+        <button onclick={}>Search</button> */}
       </div>
       <Menu />
       <div className={btnContainerCss}>
