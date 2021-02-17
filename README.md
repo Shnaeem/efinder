@@ -16,10 +16,6 @@ eFinder is an application that allows users to find concerts and sporting events
     <img src="src\images\wireframes.png" alt="Logo">
   </a>
 
-## Component Hierarchy: 
-  <a href="https://github.com/Shnaeem/efinder">
-    <img src="src\images\component.png" alt="Logo">
-  </a>
   
 ## API Resources:
 
@@ -43,6 +39,11 @@ eFinder is an application that allows users to find concerts and sporting events
 - Test hypotheses about market needs
 - Test the product with users
 - Make adjustments to the product vision based on feedback
+
+## Component Hierarchy: 
+  <a href="https://github.com/Shnaeem/efinder">
+    <img src="src\images\component.png" alt="Logo">
+  </a>
 
 ## 📃License
 License
