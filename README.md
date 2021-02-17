@@ -2,7 +2,7 @@
 
 ## What is eFinder?:
 
-eFinder is an application that allows users to find concerts, festivals, and sporting events. Instead of barraging users with endless search results that get seemingly less and less relevant as they go on, eFinder simply displays the top most relevant results, giving users a less overwhelming amount of search results. User is able to access the application which displays a search by event function, event type and location.
+eFinder is an application that allows users to find concerts, festivals, and sporting events. Instead of barraging users with endless search results that get seemingly less and less relevant as they go on, eFinder simply displays the top most relevant results, giving users a less overwhelming amount of search results. User is able to access the application which displays following features,
 
 ## Features:
 - User will see a **Trending Event**
