@@ -13,6 +13,9 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 
 ## Wireframes: 
 
+## Component Hierarchy: 
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/KAtM1Z6pMkinaBoP2GirsQ"></iframe>
+
 ## API Resources:
 
 | API Resource Type  | Links |
