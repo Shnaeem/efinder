@@ -5,7 +5,7 @@ import { textColor, fontFamily, activeColor } from '../common/Scheme';
 const useStyles = makeStyles((theme) => ({
   container: {
     width: '240px',
-    height: '330px',
+    height: '240px',
     position: 'relative',
     WebkitPerspective: '800px',
     MozPerspective: '800px',
@@ -51,10 +51,12 @@ const useStyles = makeStyles((theme) => ({
     OTransform: 'rotateY( 180deg )',
     transform: 'rotateY( 180deg )',
     '& div': {
-      marginTop: '20px',
+      marginTop: '2px',
+      lineHeight: "1em",
     },
     '& p': {
       padding: '5px 24px',
+      margin: '3px',
       color: textColor,
       fontFamily,
       fontSize: '15px',
@@ -80,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
   imgTextCss: {
     position: 'absolute',
     bottom: '0',
+    paddingBottom: "120px",
     
     '& p': {
       position: 'relative',

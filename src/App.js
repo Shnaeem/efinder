@@ -19,7 +19,6 @@ function App() {
   const getData = async () => {
     // let url1 =`${masterUrl}/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us`;
     let url1 =`${masterUrl}/events?apikey=ZQnFUWNUnfJEvDniHy63e5J9OdVNGZcV&locale=en-us&stateCode=ny&preferredCountry=us`;
-    
     let res1 = await axios.get(url1);
     setOutput(res1.data._embedded.events);
   };
