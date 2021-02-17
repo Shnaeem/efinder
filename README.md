@@ -5,10 +5,10 @@
 eFinder is an application that allows users to find concerts, festivals, and sporting events. Instead of barraging users with endless search results that get seemingly less and less relevant as they go on, eFinder simply displays the top most relevant results, giving users a less overwhelming amount of search results. User is able to access the application which displays a search by event function, event type and location.
 
 ## Features:
-- User will see a **Search for events** on the home page
-- User will be able to **search/generate twenty results**
-- User will be able to **search by artists**
-- User will be able to **search by events**
+- User will see a **Trending Event**
+- User will be able to see **Top Concerts**
+- User will be able to see **Top Sports Events**
+-User can **Purchase Ticket** from by clicking on buy ticket, and they will be redirected to ticket master.
 - Responsive layout
 
 ## Wireframes: 
@@ -23,7 +23,7 @@ eFinder is an application that allows users to find concerts, festivals, and spo
 
 - `HTML/CSS`
 - `Javascript`
-- [Tailwind CSS]( https://tailwindcss.com/)
+- [Material UI]( https://material-ui.com/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [React](https://reactjs.org/)
 - [React-Router](https://reactrouter.com/web/guides/quick-start)
