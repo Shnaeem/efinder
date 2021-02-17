@@ -12,6 +12,9 @@ eFinder is an application that allows users to find concerts and sporting events
 - Responsive layout
 
 ## Wireframes: 
+  <a href="https://github.com/Shnaeem/efinder">
+    <img src="src\images\wireframes.png" alt="Logo">
+  </a>
 
 ## Component Hierarchy: 
   <a href="https://github.com/Shnaeem/efinder">
