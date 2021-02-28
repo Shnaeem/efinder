@@ -1,4 +1,4 @@
-import { FETCH_DATA } from './types';
+import { FETCH_DATA, SEARCH_DATA } from './types';
 import axios from 'axios';
 
 export const fetchDataAction = () => (dispatch) => {
@@ -12,4 +12,11 @@ export const fetchDataAction = () => (dispatch) => {
     .catch((err) => {
       console.log(err);
     });
+};
+
+export const searchEventAction = (searchKeyword) => {
+  return {
+    type: SEARCH_DATA,
+    payload: searchKeyword,
+  };
 };

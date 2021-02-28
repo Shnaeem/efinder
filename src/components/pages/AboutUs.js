@@ -12,10 +12,10 @@ const useStyles = makeStyles(() => ({
     '& p': {
         padding: '1.5em',
         color: "black",
-        fontFamily: "Arial, Helvetica, sans-serif",
-        fontSize: 'calc(1em + 0.5vw)',
+        fontFamily: "Poppins",
+        fontSize: 'calc(1em + .1vw)',
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        borderRadius: '15px',
+        borderRadius: '5px',
       },
 },
 

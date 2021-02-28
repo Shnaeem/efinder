@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 function Carousel({ data }) {
   const classes = useStyles();
   const { slideContainer } = classes;
@@ -64,7 +63,6 @@ function Carousel({ data }) {
     slidesToScroll: 4,
     initialSlide: 0,
     arrows: true,
-
     responsive: [
       {
         breakpoint: 1024,
@@ -87,6 +85,7 @@ function Carousel({ data }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],

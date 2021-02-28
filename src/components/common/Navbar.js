@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, makeStyles } from '@material-ui/core';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import Menu from './Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import { useDispatch } from 'react-redux';
+import { searchEventAction } from '../../action/actions';
+
 import {
   primaryColor,
   secondaryColor,
@@ -26,15 +30,31 @@ const useStyles = makeStyles((theme) => ({
     padding: '14px 8px',
     ...flexBetween,
   },
+  logoWrapper: {
+    ...flexStart,
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
+  },
+  inputContainerCss: {
+    background: secondaryColor,
+    width: '300px',
+    ...flexBetween,
+    marginLeft: '20px',
+    borderRadius: '5px',
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+      marginLeft: '5px',
+    },
+  },
+
   inputCss: {
     background: secondaryColor,
     padding: '8px 16px',
     color: textColor,
     fontSize: '12px',
-    borderRadius: '5px',
     border: 'none',
-    width: '300px',
-    marginLeft: '20px',
+    width: '100%',
     fontFamily,
     '&::placeholder': {
       color: 'white',
@@ -42,16 +62,6 @@ const useStyles = makeStyles((theme) => ({
     },
     '&:focus': {
       outline: 'none',
-    },
-    [theme.breakpoints.down('xs')]: {
-      width: '100%',
-      marginLeft: '5px',
-    },
-  },
-  logoWrapper: {
-    ...flexStart,
-    [theme.breakpoints.down('xs')]: {
-      width: '100%',
     },
   },
   btnCss: {
@@ -76,9 +86,24 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  searcIconCss: {
+    color: 'white',
+    marginRight: '10px',
+    cursor: 'pointer',
+  },
+  linkCss: {
+    marginTop: '4px',
+  },
 }));
 
 function Navbar() {
+  const dispatch = useDispatch();
+  const [keyword, setKeyword] = useState('');
+
+  const handleInput = () => {
+    dispatch(searchEventAction(keyword));
+  };
+
   const classes = useStyles();
   const {
     navContainerCss,
@@ -88,18 +113,30 @@ function Navbar() {
     activeNavLink,
     navLink,
     btnContainerCss,
+    inputContainerCss,
+    searcIconCss,
+    linkCss,
   } = classes;
 
   return (
     <div className={navContainerCss}>
       <div className={logoWrapper}>
         <img src={logo} alt="eFinder-logo" />
-        {/* <input
-          type="text"
-          className={inputCss}
-          placeholder="Search by artist , sports or zip code"
-        />
-        <button onclick={}>Search</button> */}
+        <div className={inputContainerCss}>
+          <input
+            type="text"
+            value={keyword}
+            className={inputCss}
+            placeholder="Search by artists, sports or zip code"
+            onChange={(e) => setKeyword(e.target.value)}
+          />
+          <Link to="/search" className={linkCss}>
+            <SearchIcon
+              className={searcIconCss}
+              onClick={() => handleInput()}
+            />
+          </Link>
+        </div>
       </div>
       <Menu />
       <div className={btnContainerCss}>

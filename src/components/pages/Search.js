@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import Navbar from '../common/Navbar';
 import Footer from '../common/Footer';
-import SportsSection from '../common/sports/SportsSection';
+import SearchSection from '../common/search/SearchSection';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
@@ -13,23 +13,22 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Sports({ sportsData }) {
+function Search({ searchData }) {
   const classes = useStyles();
   const { mainSectionCss } = classes;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <Fragment>
       <Navbar />
       <section className={mainSectionCss}>
-        <SportsSection sportsData={sportsData} />
+        <SearchSection searchData={searchData} />
       </section>
       <Footer />
     </Fragment>
   );
 }
 
-export default Sports;
+export default Search;

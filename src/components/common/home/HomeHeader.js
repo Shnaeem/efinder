@@ -19,7 +19,7 @@ function HomeHeader({ data }) {
 
   return (
     <section>
-      <h1 className={headigCss}>Trending in US</h1>
+      <h1 className={headigCss}>Trending Events</h1>
       <Carousel data={data} />
     </section>
   );

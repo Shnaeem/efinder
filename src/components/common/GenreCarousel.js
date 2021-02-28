@@ -10,7 +10,9 @@ import icon3 from '../../assets/icon3.png';
 import icon4 from '../../assets/icon4.png';
 import icon5 from '../../assets/icon5.png';
 import icon6 from '../../assets/icon6.png';
-
+import { searchEventAction } from '../../action/actions';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const cardData = [
   {
@@ -29,7 +31,7 @@ const cardData = [
     imgUrl: icon3,
   },
   {
-    title: 'Alternation',
+    title: 'Alternative',
     color: '#00c029',
     imgUrl: icon4,
   },
@@ -42,21 +44,6 @@ const cardData = [
     title: 'Latin',
     color: 'tan',
     imgUrl: icon6,
-  },
-  {
-    title: 'Hip Hop Rap',
-    color: '#de00c9',
-    imgUrl: icon1,
-  },
-  {
-    title: 'Rock',
-    color: 'blue',
-    imgUrl: icon2,
-  },
-  {
-    title: 'Latin',
-    color: 'salmon',
-    imgUrl: icon3,
   },
 ];
 
@@ -77,12 +64,17 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
     },
   },
+  linkCss: {
+    textDecoration: 'none',
+  },
 }));
 
 function GenreCarousel() {
   const classes = useStyles();
-  const { slideContainer } = classes;
+  const { slideContainer, linkCss } = classes;
   const [slides, setSlides] = useState(null);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (window.innerWidth < 1280) {
@@ -146,12 +138,18 @@ function GenreCarousel() {
       <Slider {...settings}>
         {cardData.map((genre, index) => {
           return (
-            <GenreCard
+            <Link
+              to="/search"
               key={index}
-              icon={genre.imgUrl}
-              text={genre.title}
-              color={genre.color}
-            />
+              onClick={() => dispatch(searchEventAction(genre.title))}
+              className={linkCss}
+            >
+              <GenreCard
+                icon={genre.imgUrl}
+                text={genre.title}
+                color={genre.color}
+              />
+            </Link>
           );
         })}
       </Slider>

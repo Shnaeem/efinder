@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Navbar from '../common/Navbar';
 import Footer from '../common/Footer';
 import ConcertsSection from '../common/concerts/ConcertsSection';
@@ -13,10 +13,14 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-
 function Concerts({ concertsData }) {
   const classes = useStyles();
   const { mainSectionCss } = classes;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Fragment>
       <Navbar />

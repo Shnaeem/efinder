@@ -1,7 +1,8 @@
-import { FETCH_DATA } from '../action/types';
+import { FETCH_DATA, SEARCH_DATA } from '../action/types';
 
 const initialState = {
   data: [],
+  keyword: '',
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,10 +13,14 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
       };
+    case SEARCH_DATA:
+      return {
+        ...state,
+        keyword: action.payload,
+      };
     default:
       return state;
   }
 };
-
 
 export default reducer;

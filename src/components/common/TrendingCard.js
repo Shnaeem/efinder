@@ -43,8 +43,10 @@ const useStyles = makeStyles((theme) => ({
   front: {
     background: activeColor,
     position: 'relative',
+    zIndex: '1',
   },
   back: {
+    zIndex: '2',
     background: '#161719',
     WebkitTransform: 'rotateY( 180deg )',
     MozTransform: 'rotateY( 180deg )',
@@ -52,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotateY( 180deg )',
     '& div': {
       marginTop: '2px',
-      lineHeight: "1em",
+      lineHeight: '1em',
     },
     '& p': {
       padding: '5px 24px',
@@ -66,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
       color: activeColor,
       fontFamily,
       fontSize: '15px',
+      margin: '5px 0 0 0',
+      display: 'block',
     },
   },
   flipped: {
@@ -82,26 +86,37 @@ const useStyles = makeStyles((theme) => ({
   imgTextCss: {
     position: 'absolute',
     bottom: '0',
-    paddingBottom: "120px",
-    
     '& p': {
-      position: 'relative',
-      marginTop: '270px',
       marginLeft: '20px',
       marginBottom: '5px',
-      backgroundColor: "rgba(0, 0, 0, 0.3)",
     },
     '& h5': {
       marginLeft: '20px',
       marginTop: '5px',
-      backgroundColor: "rgba(0, 0, 0, 0.3)",
     },
+  },
+  bottomSectionCss: {
+    background: 'rgba(0,0,0,0.4)',
+    borderRadius: '0px 0px 10px 10px',
+    width: '99%',
+    padding: '1px',
+    position: 'absolute',
+    bottom: '0',
   },
 }));
 
 function Card({ image, title, date, time, venue, venuecity, buyticket }) {
   const classes = useStyles();
-  const { container, card, front, back, flipped, imgCss, imgTextCss } = classes;
+  const {
+    container,
+    card,
+    front,
+    back,
+    flipped,
+    imgCss,
+    imgTextCss,
+    bottomSectionCss,
+  } = classes;
 
   const [flip, setFlip] = useState(false);
 
@@ -109,29 +124,28 @@ function Card({ image, title, date, time, venue, venuecity, buyticket }) {
     setFlip(!flip);
   };
 
-
   return (
     <section className={container}>
       <div className={flip ? `${card} ${flipped}` : card} onClick={cardFlip}>
         <div className={front}>
           <img className={imgCss} src={image} alt="" />
           <div className={imgTextCss}>
-            <p>{title}</p>
-            <h5>Data: {date}</h5>
+            <section className={bottomSectionCss}>
+              <p>{title}</p>
+              <h5>Date: {date}</h5>
+            </section>
           </div>
         </div>
         <div className={back}>
-          <div>
-            <p>{title}</p>
-            <p>Date: {date}</p>
-            <p>Time: {time}</p>
-            <p>Venue: {venue}</p>
-            <p>City: {venuecity}</p>
-            <a href={buyticket} target="_blank">
-              {' '}
-              Buy Tickets Here{' '}
-            </a>
-          </div>
+          <p>{title}</p>
+          <p>Date: {date}</p>
+          <p>Time: {time}</p>
+          <p>Venue: {venue}</p>
+          <p>City: {venuecity}</p>
+          <a href={buyticket} target="_blank">
+            {' '}
+            Buy Tickets Here{' '}
+          </a>
         </div>
       </div>
     </section>
